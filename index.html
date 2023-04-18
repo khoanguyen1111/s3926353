@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DangKhoaNguyenwebsite</title>
+        <style>
+            .row{
+                margin-top:40px;
+            }
+            .left-column{
+                float:left;
+                width:30%;
+                margin-left:30px;
+            }
+            .center-column{
+                width:30%;
+                margin:auto;
+            }
+            .right-column{
+                float:right;
+                width:30%;
+                margin:auto;
+            }
+            .image-container{
+                display: table-cell;
+                vertical-align: middle;
+                margin: auto;
+            }
+        </style>
+        <script> src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.2.1/buzz.min.js"</script>
+    </head>
+    
+    <body> 
+
+        <div class="row">
+            <div class="left-column"><div class="image-container"><img id="house" src="img/house.png" height="200" width="200"/></div></div>
+            <div class="right-column"><div class="image-container"><img id="bed" src="img/bed.png" height="200" width="200"/></div></div>
+            <div class="center-column"><div class="image-container"><img id="shower" src="img/shower.png" height="200" width="200"/></div></div>
+        </div>
+
+        <div class="row">
+            <div class="left-column"><div class="image-container"><img id="clothes" src="img/clothes.png" height="200" width="200"/></div></div>
+            <div class="right-column"><div class="image-container"><img id="kitchen" src="img/kitchen.png" height="200" width="200"/></div></div>
+            <div class="center-column"><div class="image-container"><img id="plant" src="img/plant.png" height="200" width="200"/></div></div>
+        </div>
+
+        <div class="row">
+            <div class="left-column"><div class="image-container"><img id="shelf" src="img/shelf.png" height="200" width="200"/></div></div>
+            <div class="right-column"><div class="image-container"><img id="lamp" src="img/lamp.png" height="200" width="200"/></div></div>
+            <div class="center-column"><div class="image-container"><img id="tv" src="img/tv.png" height="200" width="200"/></div></div>
+        </div>
+
+        <script>
+            var sound1 = new buzz.sound("sound/bath.mp3");
+            var sound2 = new buzz.sound("sound/bed.mp3");
+            var sound3 = new buzz.sound("sound/house.mp3");
+            var sound4 = new buzz.sound("sound/kitchen.mp3");
+            var sound5 = new buzz.sound("sound/lamp.mp3");
+            var sound6 = new buzz.sound("sound/plant.mp3");
+            var sound7 = new buzz.sound("sound/tv.mp3");
+            var sound8 = new buzz.sound("sound/wardrobe.mp3");
+           
+            window.onload = function (){
+                document.getElementById('house').addEventListener('mouseover', function () {sound3.play();});
+                document.getElementById('shower').addEventListener('mouseover', function () {sound1.play();});
+                document.getElementById('bed').addEventListener('mouseover', function () {sound2.play();});
+                document.getElementById('clothes').addEventListener('mouseover', function () {sound8.play();});
+                document.getElementById('kitchen').addEventListener('mouseover', function () {sound4.play();});
+                document.getElementById('plant').addEventListener('mouseover', function () {sound6.play();});
+                document.getElementById('lamp').addEventListener('mouseover', function () {sound5.play();});
+                document.getElementById('tv').addEventListener('mouseover', function () {sound7.play();});
+            };
+        </script>
+
+    </body>
+</html>
